@@ -1,0 +1,21 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{meta_title}}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="creator" content="Kevin Holland">
+  <meta name="robots" content="index,follow">
+  <meta name="keywords" content="blog,portfolio,ghost">
+  <meta name="description" content="{{meta_description}}">
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+  {{{body}}}
+  {{ghost_foot}}
+  {{> footer}}
+  <script type="text/javascript" src="assets/build/bundle.js"></script>
+</body>
+</html>

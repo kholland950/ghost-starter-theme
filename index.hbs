@@ -1,0 +1,26 @@
+{{!< default}}
+
+<!-- Recent Loop -->
+<section class="feed_posts">
+  <div class="container">
+
+    {{#foreach posts}}
+      <div class="{{post_class}}">
+        <h2><a href="{{url}}">{{{title}}}</a></h2>
+        <p>{{excerpt words="26"}} <a href="{{url}}">&raquo;</a></p>
+
+        {{#if author.image}}
+        <img src="{{author.image}}" alt="{{author.name}}">
+        {{/if}}
+
+        {{author}}
+
+        {{tags prefix=" on "}}
+
+        <span>{{date format="DD MMMM YYYY"}}</span>
+      </div>
+    {{/foreach}}
+
+{{pagination}}
+  </div>
+</section>

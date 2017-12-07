@@ -1,0 +1,23 @@
+{{!< default}}
+
+{{#post}}
+<article class="{{post_class}} ">
+  <header style="background-image: url({{image}});">
+    <div>
+      <time>
+        <small>{{date format="DD MMMM YYYY"}}</small>
+      </time>
+      <h1>
+          {{title}}
+      </h1>
+      {{#author}}
+        <h5>By
+          <a href="{{url}}">{{name}}</a>
+        </h5>
+      {{/author}}
+    </div>
+  </header>
+  {{content}}
+  </div>
+</article>
+{{/post}}
