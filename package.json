@@ -1,0 +1,49 @@
+{
+  "name": "starter-ghost-theme",
+  "version": "1.0.0",
+  "description": "Starter Ghost Theme",
+  "scripts": {
+    "start": "npm-run-all --parallel scss-compile watch",
+    "scss-compile": "node-sass assets/scss -o assets/build/css",
+    "watch": "node-sass -rw assets/scss -o assets/build/css",
+    "run-webpack": "webpack ./webpack.config"
+  },
+  "author": "Kevin Holland",
+  "license": " ISC",
+  "dependencies": {
+    "babel-core": "6.21.0",
+    "babel-loader": "6.2.10",
+    "babel-preset-latest": "6.16.0",
+    "eslint": "3.12.2",
+    "eslint-loader": "1.6.1",
+    "npm-run-all": "3.1.2",
+    "node-sass": "4.3.0",
+    "scss-compile": "0.1.7",
+    "open": "0.0.5",
+    "webpack": "1.14.0",
+    "webpack-dev-middleware": "1.9.0",
+    "webpack-hot-middleware": "2.13.2"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "rules": {
+      "no-console": "off",
+      "no-debugger": "warn"
+    }
+  }
+}
