@@ -2,11 +2,15 @@
   "name": "starter-ghost-theme",
   "version": "1.0.0",
   "description": "Starter Ghost Theme",
+  "watch": {
+    "scss-compile": "assets/scss/*.scss",
+    "build": "assets/js/*.js"
+  },
   "scripts": {
-    "start": "npm-run-all --parallel scss-compile watch",
+    "start": "npm-run-all --parallel watch",
     "scss-compile": "node-sass assets/scss -o assets/build/css",
-    "watch": "node-sass -rw assets/scss -o assets/build/css",
-    "run-webpack": "webpack ./webpack.config"
+    "build": "webpack",
+    "watch": "npm-watch"
   },
   "author": "Kevin Holland",
   "license": " ISC",
@@ -17,6 +21,7 @@
     "eslint": "3.12.2",
     "eslint-loader": "1.6.1",
     "npm-run-all": "3.1.2",
+    "npm-watch": "^0.3.0",
     "node-sass": "4.3.0",
     "scss-compile": "0.1.7",
     "open": "0.0.5",
