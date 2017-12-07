@@ -12,7 +12,11 @@
     "build": "webpack",
     "watch": "npm-watch"
   },
-  "author": "Kevin Holland",
+  "author": { 
+    "name": "Kevin Holland", 
+    "email": "kevinholland94@gmail.com",
+    "website": "https://kevinholland.me"
+  },
   "license": " ISC",
   "dependencies": {
     "babel-core": "6.21.0",
