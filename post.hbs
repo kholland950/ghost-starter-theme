@@ -1,8 +1,9 @@
 {{!< default}}
 
 {{#post}}
-<article class="{{post_class}} ">
-  <header style="background-image: url({{image}});">
+<article class="{{post_class}}">
+  {{image}}
+  <header style="background-image: url({{img_url feature_image}});">
     <div>
       <time>
         <small>{{date format="DD MMMM YYYY"}}</small>
@@ -10,14 +11,11 @@
       <h1>
           {{title}}
       </h1>
-      {{#author}}
-        <h5>By
-          <a href="{{url}}">{{name}}</a>
-        </h5>
-      {{/author}}
     </div>
   </header>
-  {{content}}
+  <div class="content">
+      {{content}}
+  </div>
   </div>
 </article>
 {{/post}}

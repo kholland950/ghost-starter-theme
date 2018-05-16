@@ -4,15 +4,27 @@
   "description": "Starter Ghost Theme",
   "watch": {
     "scss-compile": "assets/scss/*.scss",
-    "build": "assets/js/*.js"
+    "build": {
+      "patterns": [
+        "assets", "./"
+      ],
+      "extensions": "hbs,js"
+    }
+  },
+  "config": {
+    "posts_per_page": 6
   },
   "scripts": {
     "start": "npm-run-all --parallel watch",
-    "scss-compile": "node-sass assets/scss -o assets/build/css",
+    "scss-compile": "node-sass -rw assets/scss -o assets/build/css",
     "build": "webpack",
     "watch": "npm-watch"
   },
-  "author": "Kevin Holland",
+  "author": { 
+    "name": "Kevin Holland", 
+    "email": "kevinholland94@gmail.com",
+    "website": "https://kevinholland.me"
+  },
   "license": " ISC",
   "dependencies": {
     "babel-core": "6.21.0",

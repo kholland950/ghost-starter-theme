@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("//cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("//cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("//cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("//cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("//cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("//cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.icon:before, [data-icon]:before {
+  display: inline-block;
+  font-family: FontAwesome !important;
+  font-weight: normal !important;
+  font-style: default !important;
+  text-decoration: none !important;
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[data-icon] {
+  padding-left: 3.5em;
+  position: relative;
+  vertical-align: middle; }
+  [data-icon]:before {
+    content: attr(data-icon);
+    margin-left: -3.5em;
+    width: 3.5em;
+    text-align: center; }

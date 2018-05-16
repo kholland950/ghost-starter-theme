@@ -1,3 +1,7 @@
-const hello = 'hello'
-console.log(`${hello} there!`)
-
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.post-grid article').forEach((it, index) => {
+        it.addEventListener('click', function() {
+            this.querySelector('.post-link').click()
+        })
+    })
+})

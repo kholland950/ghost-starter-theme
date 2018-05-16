@@ -1,6 +1,139 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Montserrat:400,700|Open+Sans:400,700');
+@import 'defaults.scss';
+@import 'post-grid.scss';
+@import 'post.scss';
+@import 'footer.scss';
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
+.brand {
+  font-family: 'Montserrat', sans-serif
+}
+
+.content {
+  font-family: 'Merriweather', sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header#page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  padding: 15px 40px;
+
+  .brand {
+    font-weight: bold;
+    letter-spacing: .25ch;
+    margin-bottom: 0;
+
+    a {
+      position: relative;
+      color: black;
+      text-decoration: none;
+      margin-right: 2em;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 3px;
+        bottom: -5px;
+        background-color: black;
+        transition: .25s all;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .tagline {
+    font-size: 1.5rem;
+    color: #777;
+    line-height: 3.5rem;
+  }
+}
+
+section.headline {
+  padding: 7em 1em;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  text-shadow: 1px 1px 9px rgba(0,0,0,.4);
+  
+  h1, h2 {
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+    color: white;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 1.1em;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.1em;
+  }
+}
+
+nav.pagination {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 740px) {
+  header#page-nav {
+    display: block;
+
+    .brand {
+      font-size: 7vw;
+      margin-bottom: .5em;
+    }
+
+    .tagline {
+      font-size: .6em;
+      line-height: 1.1em;
+    }
+  }
+
+  section.headline {
+    min-height: auto;
+    padding: 7em 1em;
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+}
+
+a.tag {
+  color: #19ddc4;
+  border-radius: 1em;
+  border: 2px solid #19ddc4;
+  text-decoration: none;
+  padding: .25em .5em;
+  transition: .2s all ease;
+
+  &:hover {
+    background-color: #19ddc4;
+    color: white;
+  }
+}
