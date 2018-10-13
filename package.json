@@ -2,6 +2,9 @@
   "name": "starter-ghost-theme",
   "version": "1.0.0",
   "description": "Starter Ghost Theme",
+  "keywords": [
+    "ghost-theme"
+  ],
   "watch": {
     "scss-compile": "assets/scss/*.scss",
     "build": {

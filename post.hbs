@@ -3,18 +3,23 @@
 {{#post}}
 <article class="{{post_class}}">
   {{image}}
-  <header style="background-image: url({{img_url feature_image}});">
-    <div>
+  <header>
+    <div class="post-info">
+      <p>
+        {{title}}
+      </p>
       <time>
         <small>{{date format="DD MMMM YYYY"}}</small>
       </time>
-      <h1>
-          {{title}}
-      </h1>
+    </div>
+    <div class="cropper">
+      <img src="{{img_url feature_image}}" />
     </div>
   </header>
   <div class="content">
+    <div class="post-markdown">
       {{content}}
+  </div>
   </div>
   </div>
 </article>

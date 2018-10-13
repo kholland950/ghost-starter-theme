@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Montserrat:400,700|Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Montserrat:400,700|Open+Sans:200,400,700');
 @import 'defaults.scss';
 @import 'post-grid.scss';
 @import 'post.scss';
 @import 'footer.scss';
+@import 'error.scss';
 
 html {
   font-family: 'Open Sans', sans-serif;
@@ -21,6 +22,10 @@ body {
   margin: 0;
   width: 100%;
   overflow-x: hidden;
+}
+
+main {
+  min-height: calc(100vh - 350px);
 }
 
 header#page-nav {
@@ -93,6 +98,8 @@ section.headline {
   }
 }
 
+
+
 nav.pagination {
   margin-top: 2em;
   text-align: center;
@@ -104,7 +111,7 @@ nav.pagination {
     display: block;
 
     .brand {
-      font-size: 7vw;
+      font-size: calc(2rem + (1vw - .48rem));
       margin-bottom: .5em;
     }
 

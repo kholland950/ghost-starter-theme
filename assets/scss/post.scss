@@ -2,30 +2,51 @@
 
 body.post-template {
     .post {
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.5rem; }
+        h5 { font-size: 1.25rem; }
+
         header {
-            position: relative;
-            padding: 1em;
-            min-height: 10em;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-size: cover;
-            background-position: top;
-            font-size: 3rem;
-            color: white;
-            text-shadow: 1px 1px 7px rgba(0,0,0,.2);
-            @include darkened;
-            h1 {
-                color: white;
+            padding: 0 5vw;
+            div.post-info {
+                margin: 0 0 2rem;
+                width: 100%;
+                max-width: 1000px;
+                align-items: flex-start;
+
+                p {
+                    justify-content: flex-start;
+                    margin: 5px 0;
+                    font-size: 2.5rem;
+                }
+                time {
+                    font-size: 1.5rem;
+                    margin: 0 0 10px;
+                }
+            }
+            div.cropper {
+                max-width: 1200px;
+                max-height: 70vh;
+                min-height: 20em;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
             }
         }
     
-        div.kg-card-markdown {
-            padding: 3vw 5vw;
+        div.post-markdown {
+            padding: 2rem 2rem;
             margin: 0 auto;
-            max-width: 1100px;
-            font-size: 1.5rem;
+            max-width: 900px;
+            font-size: 1.25rem;
+            letter-spacing: .5px;
             line-height: 1.5em;
     
             img {
@@ -40,17 +61,15 @@ body.post-template {
        .post {
             header {
                 font-size: 1.75rem;
-                min-height: 7.5em;
-                text-shadow: 1px 1px 9px rgba(0,0,0,.4);
 
-                h1 {
+                p {
                     line-height: 1.2em;
                     font-size: 1.75rem;
                 }
             }
 
-           div.kg-card-markdown {
-                font-size: 1.15rem;
+           div.post-markdown {
+                font-size: 1rem;
             }
         }
     }

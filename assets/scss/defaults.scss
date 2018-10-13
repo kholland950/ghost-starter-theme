@@ -1,3 +1,6 @@
+* {
+  color: #252525;
+}
 h1,
 h2,
 h3,
@@ -12,39 +15,34 @@ h6,
 .h6 {
   color: #222222;
   font-weight: 600;
+  line-height: 1.1em;
 }
 h1,
 .h1 {
   font-size: 3.6rem;
-  line-height: 4.8rem;
   margin-bottom: 16px;
 }
 h2,
 .h2 {
   font-size: 3rem;
-  line-height: 4.1rem;
   margin-bottom: 16px;
 }
 h3,
 .h3 {
   font-size: 2.4rem;
-  line-height: 3.2rem;
   margin-bottom: 16px;
 }
 h4,
 .h4 {
   font-size: 1.8rem;
-  line-height: 2.8rem;
 }
 h5,
 .h5 {
   font-size: 1.6rem;
-  line-height: 2.6rem;
 }
 h6,
 .h6 {
   font-size: 1.2rem;
-  line-height: 1.6rem;
 }
 a {
   color: #19ddc4;
@@ -70,8 +68,8 @@ figcaption {
   blockquote {
     border-left: 2px solid #19ddc4;
     color: #999999;
-    font-size: 2.4rem;
-    line-height: 4rem;
+    font-size: 1.5rem;
+    line-height: rem;
     font-weight: 300;
     font-style: italic;
     padding: 0px 20px;
@@ -92,8 +90,9 @@ figcaption {
     border-top: 1px solid rgba(221, 221, 221, 0.5);
   }
   pre {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2.4rem;
+    overflow-x: auto;
     padding: 0;
     border: none;
   }
