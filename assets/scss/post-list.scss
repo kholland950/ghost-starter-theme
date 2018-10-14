@@ -1,0 +1,127 @@
+@import 'mixins.scss';
+.post-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 24px auto;
+  width: calc(70% - 48px);
+  max-width: 900px;
+  min-width: 360px;
+  & article {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 2em 0;
+    color: white;
+    transition: .25s all ease;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    letter-spacing: .5px;
+    .image-container {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 25rem;
+      z-index: -1;
+      cursor: pointer;
+      background-size: cover;
+      background-position: center;
+    }
+    section.post-main {
+      position: relative;
+      bottom: 0;
+      min-height: 10em;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 1em;
+      background-color: white;
+      color: black;
+      overflow: hidden;
+      overflow-wrap: normal;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & header {
+        position: relative;
+        margin: 1em 0;
+        h2 {
+          font-size: 1.75rem;
+          margin: 1rem 0 .5em 0;
+          line-height: 1.25em;
+        }
+        a {
+          color: #333;
+          text-decoration: none;
+          margin-bottom: 0;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      main {
+        margin-bottom: 1em;
+        & p.excerpt {
+          margin-top: 0;
+          margin-bottom: 0;
+          line-height: 1.25em;
+          &::after {
+            content: '...';
+          }
+        }
+        & p.continue {
+          font-weight: bold;
+          margin: 5px 0;
+          &>a {
+            font-size: 1.2em;
+            color: #333;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      & .post-info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3em;
+      }
+      & footer {
+        // display: flex;
+        // justify-content: space-between;
+        margin-bottom: 1em;
+      }
+    }
+    &:hover {
+      &:before {
+        background-color: rgba(0, 0, 0, .6);
+      }
+    }
+    @include darkened;
+    &::before {
+      cursor: pointer;
+      height: 25rem;
+    }
+  }
+}
+@media screen and (max-width: 740px) {
+  .post-list {
+    & article {
+      .image-container {
+        height: 50vw;
+      }
+      &::before {
+        height: 50vw;
+      }
+      section.post-main {
+        & header {
+          h2 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

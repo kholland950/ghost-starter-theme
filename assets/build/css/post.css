@@ -1,52 +1,51 @@
-body.post-template .post h1 {
+body.post-template .post h1, body.page-template .post h1 {
   font-size: 2.5rem; }
 
-body.post-template .post h2 {
+body.post-template .post h2, body.page-template .post h2 {
   font-size: 2rem; }
 
-body.post-template .post h3 {
+body.post-template .post h3, body.page-template .post h3 {
   font-size: 1.75rem; }
 
-body.post-template .post h4 {
+body.post-template .post h4, body.page-template .post h4 {
   font-size: 1.5rem; }
 
-body.post-template .post h5 {
+body.post-template .post h5, body.page-template .post h5 {
   font-size: 1.25rem; }
 
-body.post-template .post header {
+body.post-template .post header, body.page-template .post header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0 5vw; }
-  body.post-template .post header div.post-info {
+  body.post-template .post header div.post-info, body.page-template .post header div.post-info {
     margin: 0 0 2rem;
     width: 100%;
     max-width: 1000px;
     align-items: flex-start; }
-    body.post-template .post header div.post-info p {
+    body.post-template .post header div.post-info p, body.page-template .post header div.post-info p {
       justify-content: flex-start;
       margin: 5px 0;
       font-size: 2.5rem; }
-    body.post-template .post header div.post-info time {
+    body.post-template .post header div.post-info time, body.page-template .post header div.post-info time {
       font-size: 1.5rem;
       margin: 0 0 10px; }
-  body.post-template .post header div.cropper {
+  body.post-template .post header div.cropper, body.page-template .post header div.cropper {
     max-width: 1200px;
     max-height: 70vh;
-    min-height: 20em;
     overflow: hidden; }
-    body.post-template .post header div.cropper img {
+    body.post-template .post header div.cropper img, body.page-template .post header div.cropper img {
       width: 100%; }
 
-body.post-template .post div.post-markdown {
+body.post-template .post div.post-markdown, body.page-template .post div.post-markdown {
   padding: 2rem 2rem;
   margin: 0 auto;
   max-width: 900px;
   font-size: 1.25rem;
   letter-spacing: .5px;
   line-height: 1.5em; }
-  body.post-template .post div.post-markdown img {
+  body.post-template .post div.post-markdown img, body.page-template .post div.post-markdown img {
     width: 100%; }
 
 @media screen and (max-width: 740px) {

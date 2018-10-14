@@ -1,29 +1,33 @@
-{{!< default}}
+{{!< default}} <section class='headline' style='background-image: url({{@blog.cover_image}});'>
+  {{!-- <h1>{{meta_title}}</h1>
+  <h2>{{meta_description}}</h2> --}}
+  </section>
 
-<section class='headline' style='background-image: url({{@blog.cover_image}});'>
-  <h1>{{meta_title}}</h1>
-  <h2>{{meta_description}}</h2>
-</section>
-
-<!-- Recent Loop -->
-<section class="post-grid">
+  <!-- Recent Loop -->
+  <section class="post-list">
     {{#foreach posts}}
-      <article class="{{post_class}}">
+    <article class="{{post_class}}">
+      <a href="{{url}}">
         <div class='image-container' style='background-image: url({{img_url feature_image}})'>
         </div>
-        <section class='post-main'>
-          <header>
-            <h2><a class="post-link" href="{{url}}">{{{title}}}</a></h2>
-            <p class='excerpt'>{{custom_excerpt}}</p>
-          </header>
-          <footer>
-            <span class='date-published'>{{date published_at timeago="true"}}</span>
-            {{#primary_tag}}
-              | <a class='' href="{{url}}">{{name}}</a>
-            {{/primary_tag}}
-          </footer>
-        </section>
-      </article>
+      </a>
+      <section class='post-main'>
+        <header>
+          <h2><a class="post-link" href="{{url}}">{{{title}}}</a></h2>
+          <div class='post-info'>
+            <span class='date-published'>
+              {{date published_at}}
+            </span>
+          </div>
+        </header>
+        <main>
+          <p class='excerpt'>{{excerpt words="30"}}</p>
+          <p class='continue'><a href="{{url}}">Continue&nbsp;→<i class="fas fa-long-arrow-right"></i></a></p>
+        </main>
+        <footer>
+        </footer>
+      </section>
+    </article>
     {{/foreach}}
-</section>
-{{pagination}}
+  </section>
+  {{pagination}}
