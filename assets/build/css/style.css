@@ -373,35 +373,30 @@ header#page-nav {
       color: white; }
     header#page-nav #menu-holder.active #menu-drawer {
       right: 0; }
-    header#page-nav #menu-holder.active:after {
-      position: fixed;
-      z-index: -2;
-      content: '';
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100vw;
-      background-color: rgba(0, 0, 0, 0.5); }
     header#page-nav #menu-holder #menu-drawer {
       z-index: -1;
       position: fixed;
+      font-size: .75em;
       top: 0;
       right: -20em;
       height: 100%;
-      width: 20rem;
+      width: 15rem;
       color: white;
       background-color: #333;
-      padding: 6rem 0 0 3rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      padding: 6rem 0;
       transition: all .25s ease; }
       header#page-nav #menu-holder #menu-drawer nav {
         display: flex;
         flex-direction: column; }
         header#page-nav #menu-holder #menu-drawer nav a {
+          padding: .5em 1em;
           line-height: 2em;
           color: white;
-          text-decoration: none; }
+          text-decoration: none;
+          transition: .25s ease all; }
           header#page-nav #menu-holder #menu-drawer nav a:hover {
-            text-decoration: underline; }
+            background-color: #555; }
 
 section.headline {
   padding: 7em 1em;
